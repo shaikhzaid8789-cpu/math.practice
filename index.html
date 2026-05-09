@@ -7,26 +7,53 @@
     <meta name="theme-color" content="#0a0a0a" />
     <title>Math. — Primary School Math (Class 1–5)</title>
     <meta name="description" content="Math. is a primary school learning app with infinite dynamic quizzes for Class 1 to Class 5. Practice every topic with a 60-second timer." />
+    <!-- SOCIAL BAR SCRIPT (Adsterra) -->
+    <script src="https://pl29392012.profitablecpmratenetwork.com/66/a5/c5/66a5c57fd15a2886295f98ead320b559.js"></script>
+
     <link rel="stylesheet" href="./style.css" />
+    
+    <style>
+      /* Banners ko screen ke andar rakhne ke liye styling */
+      .ad-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15px; /* App content se thoda gap */
+        overflow: hidden; /* Screen se bahar jane se rokta hai */
+      }
+      /* Mobile par 728px wala banner aksar bahar jata hai, use hide ya resize karna behtar hota hai */
+      @media screen and (max-width: 768px) {
+        .desktop-banner { display: none; } /* Mobile par bade banner ko hide karein */
+      }
+    </style>
   </head>
   <body>
-    <!-- Existing Top/Header Ads (No changes made here) -->
-    <script type="text/javascript">
-        atOptions = { 'key' : '52c35a438cac4eefda062db9191c6be0', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
-    </script>
-    <script src="https://www.highperformanceformat.com/52c35a438cac4eefda062db9191c6be0/invoke.js"></script>
-    <script type="text/javascript">
-        atOptions = { 'key' : '5f5033493e5a5fef9c3201dc7114ceff', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-    </script>
-    <script src="https://www.highperformanceformat.com/5f5033493e5a5fef9c3201dc7114ceff/invoke.js"></script>
-    <!-- End Existing Ads -->
+    <!-- TOP AD SECTION -->
+    <div class="ad-wrapper">
+        <!-- 728x90 Banner (Desktop) -->
+        <div class="desktop-banner">
+            <script type="text/javascript">
+                atOptions = { 'key' : '52c35a438cac4eefda062db9191c6be0', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+            </script>
+            <script src="https://www.highperformanceformat.com/52c35a438cac4eefda062db9191c6be0/invoke.js"></script>
+        </div>
+        <!-- 320x50 Banner (Mobile) -->
+        <div class="mobile-banner">
+            <script type="text/javascript">
+                atOptions = { 'key' : '5f5033493e5a5fef9c3201dc7114ceff', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+            </script>
+            <script src="https://www.highperformanceformat.com/5f5033493e5a5fef9c3201dc7114ceff/invoke.js"></script>
+        </div>
+    </div>
+    <!-- MAIN APP CONTENT -->
     <div id="app"></div>
-    <!-- NEW: Adsterra Native Banner Footer Code -->
-    <div style="margin-top: 20px; text-align: center;">
+    <!-- FOOTER NATIVE BANNER -->
+    <div style="margin-top: 30px; padding-bottom: 20px; text-align: center; width: 100%; overflow: hidden;">
         <script async="async" data-cfasync="false" src="https://pl29387960.profitablecpmratenetwork.com/4524a2e98910e2180f1c7b0ed515c4e7/invoke.js"></script>
         <div id="container-4524a2e98910e2180f1c7b0ed515c4e7"></div>
     </div>
-    <!-- End Native Banner -->
     <script src="./script.js" defer></script>
   </body>
 </html>
