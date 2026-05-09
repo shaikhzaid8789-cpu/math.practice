@@ -1,54 +1,35 @@
 <!doctype html>
+
 <html lang="en">
+
   <head>
+
+ 
+
     <meta charset="UTF-8" />
+
+
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
     <meta name="theme-color" content="#0a0a0a" />
+
     <title>Math. — Primary School Math (Class 1–5)</title>
+
     <meta name="description" content="Math. is a primary school learning app with infinite dynamic quizzes for Class 1 to Class 5. Practice every topic with a 60-second timer." />
+
     <link rel="stylesheet" href="./style.css" />
-    
-    <style>
-      /* Ads ko center mein dikhane ke liye styling */
-      .ad-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 0;
-        background-color: transparent;
-      }
-      
-      /* Mobile par 728x90 wala lamba ad na dikhe (kyunki wo screen se bahar chala jayega) */
-      @media only screen and (max-width: 728px) {
-        .desktop-ad { display: none; }
-      }
-      
-      /* Desktop par 320x50 wala chota ad na dikhe */
-      @media only screen and (min-width: 729px) {
-        .mobile-ad { display: none; }
-      }
-    </style>
+
   </head>
+
   <body>
-
-    <!-- TOP AD: Title ke upar ya niche dikhega -->
-    <div class="ad-container desktop-ad">
-      <script type="text/javascript">
-        atOptions = { 'key' : '52c35a438cac4eefda062db9191c6be0', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
-      </script>
-      <script src="https://www.highperformanceformat.com/52c35a438cac4eefda062db9191c6be0/invoke.js"></script>
-    </div>
-
-    <div class="ad-container mobile-ad">
-      <script type="text/javascript">
-        atOptions = { 'key' : '5f5033493e5a5fef9c3201dc7114ceff', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-      </script>
-      <script src="https://www.highperformanceformat.com/5f5033493e5a5fef9c3201dc7114ceff/invoke.js"></script>
-    </div>
 
     <div id="app"></div>
 
     <script src="./script.js" defer></script>
+
   </body>
+
 </html>
