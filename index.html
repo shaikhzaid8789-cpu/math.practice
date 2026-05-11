@@ -9,37 +9,101 @@
     <meta name="description" content="Math. is a primary school learning app with infinite dynamic quizzes for Class 1 to Class 5. Practice every topic with a 60-second timer." />
     <!-- SOCIAL BAR SCRIPT (Adsterra) -->
     <script src="https://pl29392012.profitablecpmratenetwork.com/66/a5/c5/66a5c57fd15a2886295f98ead320b559.js"></script>
-
     <link rel="stylesheet" href="./style.css" />
-    
     <style>
-      /* Banners ko screen ke andar rakhne ke liye styling */
+      /* --- ORIGINAL AD STYLING --- */
       .ad-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin-bottom: 15px; /* App content se thoda gap */
-        overflow: hidden; /* Screen se bahar jane se rokta hai */
+        margin-bottom: 15px;
+        overflow: hidden;
       }
-      /* Mobile par 728px wala banner aksar bahar jata hai, use hide ya resize karna behtar hota hai */
       @media screen and (max-width: 768px) {
-        .desktop-banner { display: none; } /* Mobile par bade banner ko hide karein */
+        .desktop-banner { display: none; }
+      }
+      /* --- NEW PREMIUM PRIVACY CARD STYLING --- */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8); /* Dark Overlay */
+        backdrop-filter: blur(10px); /* Premium Blur Effect */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        transition: opacity 0.5s ease;
+      }
+      .privacy-card {
+        background: #ffffff; /* White Card */
+        padding: 35px 25px;
+        border-radius: 24px;
+        width: 85%;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        animation: slideUp 0.5s ease-out;
+      }
+      .privacy-card h2 {
+        color: #000; /* Black Text */
+        margin-bottom: 15px;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+
+      .privacy-card p {
+        color: #333; /* Dark Grey/Black Text */
+        line-height: 1.5;
+        margin-bottom: 25px;
+        font-family: sans-serif;
+        font-size: 0.95rem;
+      }
+      #ok-btn {
+        background: #000; /* Black Button */
+        color: #fff;
+        border: none;
+        padding: 12px 50px;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s;
+        width: 100%;
+      }
+      #ok-btn:hover {
+        transform: scale(1.02);
+      }
+      @keyframes slideUp {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      .fade-out {
+        opacity: 0;
+        pointer-events: none;
       }
     </style>
   </head>
   <body>
+    <!-- PRIVACY CONSENT MODAL -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="privacy-card">
+            <h2>Notice</h2>
+            <p>Before using this website, please check our <strong>Privacy Policy</strong> page below. By clicking OK, you acknowledge that you are ready to read and accept our policies.</p>
+            <button id="ok-btn" onclick="closeModal()">OK</button>
+        </div>
+    </div>
     <!-- TOP AD SECTION -->
     <div class="ad-wrapper">
-        <!-- 728x90 Banner (Desktop) -->
         <div class="desktop-banner">
             <script type="text/javascript">
                 atOptions = { 'key' : '52c35a438cac4eefda062db9191c6be0', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
             </script>
             <script src="https://www.highperformanceformat.com/52c35a438cac4eefda062db9191c6be0/invoke.js"></script>
         </div>
-        <!-- 320x50 Banner (Mobile) -->
         <div class="mobile-banner">
             <script type="text/javascript">
                 atOptions = { 'key' : '5f5033493e5a5fef9c3201dc7114ceff', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
@@ -55,5 +119,14 @@
         <div id="container-4524a2e98910e2180f1c7b0ed515c4e7"></div>
     </div>
     <script src="./script.js" defer></script>
+    <script>
+      function closeModal() {
+        const modal = document.getElementById('privacy-modal');
+        modal.classList.add('fade-out');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 500);
+      }
+    </script>
   </body>
 </html>
